@@ -152,3 +152,8 @@ func (api *API) HostsDeleteByIds(ids []string) (err error) {
 	}
 	return
 }
+
+func (api *API) HostUpdateHost(h Host) (err error) {
+	_, err = api.CallWithError("host.update", h)
+	return
+}
